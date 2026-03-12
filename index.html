@@ -28,6 +28,20 @@ max-width:700px;
 margin:auto;
 }
 
+button{
+margin-top:20px;
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:white;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
 @keyframes aparecer{
 from{opacity:0; transform:translateY(-40px)}
 to{opacity:1}
@@ -72,24 +86,31 @@ to{transform:translateY(100vh);}
 
 <p>
 Mamãe, hoje é um dia muito especial.  
-Obrigado por tudo que a sra. faz por mim todos os dias e já fez
+Obrigado por tudo que a sra. faz por mim todos os dias e já fez.  
 Eu te amo muito! 💖
 </p>
 
+<button onclick="tocarMusica()">Clique para começar a surpresa 🎵</button>
+
 <div class="slideshow">
 <img id="foto" src="foto1.jpg">
-
 </div>
 
 <footer>
-Com amor, Tuco Tuco❤️
+Com amor, Tuco Tuco ❤️
 </footer>
 
-<audio autoplay loop>
+<audio id="musica" loop>
 <source src="musica.mp3">
 </audio>
 
 <script>
+
+/* TOCAR MUSICA */
+
+function tocarMusica(){
+document.getElementById("musica").play()
+}
 
 /* CORAÇÕES */
 
@@ -144,7 +165,4 @@ document.getElementById("foto").src=fotos[index]
 </script>
 
 </body>
-
 </html>
-
-
